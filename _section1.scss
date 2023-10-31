@@ -1,0 +1,78 @@
+.section-1 {
+  width: 100%;
+  background: url('background4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .box {
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    .text {
+      @include flex(center, center);
+      flex-direction: column;
+      gap: 10px;
+      color: rgb(22, 9, 77);
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    .card-list {
+      width: 100%;
+      @include flex(center, center);
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 30px;
+
+      .card {
+        width: 350px;
+        background: rgba(255, 255, 255, .5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: rgb(22, 9, 77);
+        border: solid 2px rgba(255, 255, 255, .7);
+        @include flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 20px;
+        padding: 50px;
+
+        h1 {
+          font-size: 70px;
+        }
+
+        span {
+          font-size: 30px;
+          font-weight: 600;
+        }
+
+        p {
+          width: 80%;
+          font-weight: 600;
+        }
+
+        button {
+          border: none;
+          outline: none;
+          background: linear-gradient(90deg, #a148ff 0%, #ff6f45 100%);
+          font-size: 18px;
+          padding: 10px 20px;
+          border-radius: 50px;
+          color: #fff;
+          font-weight: 600;
+          transition: all .5s ease;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(-5px);
+          }
+        }
+      }
+    }
+  }
+}

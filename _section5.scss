@@ -1,0 +1,112 @@
+.section-5{
+    .box{
+        @include flex(center, center);
+        gap: 50px;
+        padding: 50px;
+        .image{
+            width: 70%;
+            position: relative;
+            img{
+                width: 100%;
+                border-radius: 20px;
+            }
+            .absolute{
+                position: absolute;
+                font-size: 20px;
+                color: #fff;
+                right: -20px;
+                bottom: -30px;
+                width: 300px;
+                background: rgb(0, 119, 255);
+                padding: 20px;
+                border-radius: 15px;
+                border: dashed 3px #fff;
+                outline: solid 5px rgb(0, 119, 255);
+                input{
+                    border: none;
+                    outline: none;
+                    border-radius: 50px;
+                    padding: 5px 10px;
+                    margin-top: 10px;
+                }
+                textarea{
+                    margin-top: 10px;
+                    border: none;
+                    outline: none;
+                    border-radius: 20px;
+                    padding: 5px 10px
+                }
+                button{
+                    color: #fff;
+                    padding: 10px 20px;
+                    border: none;
+                    outline: none;
+                    background: rgb(255, 196, 0);
+                    border-radius: 50px
+                }
+            }
+        }
+        .text{
+            @include flex;
+            flex-direction: column;
+            gap: 10px;
+            h1{
+                font-size: 40px;
+                position: relative;
+                &::after{
+                    content: '';
+                    z-index: -1;
+                    position: absolute;
+                    width: 100%;
+                    height: 20px;
+                    background: pink;
+                    bottom: 5px;
+                    left: 0;
+                }
+            }
+            h2{
+                font-size: 40px;
+                position: relative;
+                &::after{
+                    content: '';
+                    z-index: -1;
+                    position: absolute;
+                    width: 100%;
+                    height: 20px;
+                    background: rgb(0, 217, 255);
+                    bottom: 5px;
+                    left: 0;
+                }
+            }
+            p{
+                color: gray;
+            }
+            button{
+                border: none;
+                outline: none;
+                padding: 10px 20px;
+                background: rgb(230, 207, 5);
+                font-size: 18px;
+                font-weight: 800;
+                color: #fff;
+                border-radius: 50px;
+                cursor: pointer;
+                border: dashed 3px #fff;
+                outline: solid 5px rgb(230, 207, 5);
+            }
+        }
+    }
+}
+@media(max-width: 991px){
+    .section-5{
+        .box{
+            flex-direction: column;
+            .image{
+                width: 100%;
+            }
+            .text{
+                width: 100%;
+            }
+        }
+    }
+}

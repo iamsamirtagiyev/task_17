@@ -1,0 +1,48 @@
+.section-6{
+    .box{
+        @include flex(center, center);
+        gap: 30px;
+        .text{
+            h1{
+                font-size: 35px;
+            }
+            p{
+                color: gray;
+                width: 80%;
+            }
+            .list{
+                list-style: none;
+                li{
+                    @include flex(center);
+                    gap: 10px;
+                    div{
+                        width: 15px;
+                        height: 15px;
+                        background: red;
+                    }
+                }
+            }
+        }
+        .image{
+            width: 50%;
+            img{
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .section-6{
+        .box{
+            flex-direction: column;
+            .text{
+                width: 100%;
+            }
+            .image{
+                width: 100%;
+            }
+        }
+    }
+}
